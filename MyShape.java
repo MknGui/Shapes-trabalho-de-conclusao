@@ -1,7 +1,23 @@
 import java.awt.Color;
-public class MyShape {
-    private int x1, y1, x2, y2;
+import java.awt.Graphics;
+public abstract class MyShape {
+    private int x1;
+    private int y1;
+    private int x2;
+    private int y2;
     private Color myColor;
+    
+    public MyShape(int x1, int y1, int x2, int y2, Color myColor) {
+        this.x1 = x1;
+        this.y1 = y1;
+        this.x2 = x2;
+        this.y2 = y2;
+        this.myColor = myColor;
+    }
+    public MyShape(Color myColor) {
+        this.myColor = myColor;
+    }
+    //setter and getters
     public int getX1() {
         return x1;
     }
@@ -32,11 +48,5 @@ public class MyShape {
     public void setMyColor(Color myColor) {
         this.myColor = myColor;
     }
-    public MyShape(int x1, int y1, int x2, int y2, Color myColor) {
-        this.x1 = x1;
-        this.y1 = y1;
-        this.x2 = x2;
-        this.y2 = y2;
-        this.myColor = myColor;
-    }
+    abstract public void draw(Graphics g);
 }
