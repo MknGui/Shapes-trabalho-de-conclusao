@@ -57,6 +57,6 @@ public class MyRectangle extends MyShape{
 
     @Override //toString
     public String toString() {
-        return "Retangulo: [ " +getX1() +", " +getY1() + " ], [ " + getX2()+ ", "+ getY2()+"], " +getMyColor()+fill + "\n";
+        return "Retangulo: [ " +getX1() +", " +getY1() + " ], [ " + getX2()+ ", "+ getY2()+"], " +getColorToString()+", Preenchido: "+fill + "\n";
     }
 }

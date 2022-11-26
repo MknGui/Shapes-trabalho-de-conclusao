@@ -38,7 +38,7 @@ public class MyTriangleIso extends MyShape{
 
     @Override //toString
     public String toString() {
-        return "Triangulo Isoceles: [ " +getX1() +", " +getY1() + " ], [ " + getX2()+ ", "+ getY2()+"], " +getMyColor()+fill + "\n";
+        return "Triangulo Isoceles: [ " +getX1() +", " +getY1() + " ], [ " + getX2()+ ", "+ getY2()+"], " +getColorToString()+", Preenchido: "+fill + "\n";
     }
 
 }

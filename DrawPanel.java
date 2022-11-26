@@ -18,7 +18,7 @@ public class DrawPanel extends JPanel {
             shapeList.add(new MyLine(x, 0, x, App.getH(), Color.BLACK));
             shapeList.add(new MyLine(0, x, App.getH(), x, Color.BLACK));
         } */
-        
+
         for (int i = 0; i < (5+App.gRandom(5)); i++) {
             shapeList.add(MyLine.GRandom());
         } 

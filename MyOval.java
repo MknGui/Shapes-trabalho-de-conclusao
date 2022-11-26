@@ -14,7 +14,7 @@ public class MyOval extends MyShape {
 
     public MyOval(int x1, int y1, int x2, int y2, Color myColor) {
         super(myColor);
-        this.fill = true;
+        this.fill = false;
         if(x1>x2){
             int temp; temp=x1; x1=x2; x2=temp; 
         }
@@ -54,6 +54,6 @@ public class MyOval extends MyShape {
 
     @Override //toString
     public String toString() {
-        return "Oval: [ " +getX1() +", " +getY1() + " ], [ " + getX2()+ ", "+ getY2()+"], " +getMyColor()+fill + "\n";
+        return "Oval: [ " +getX1() +", " +getY1() + " ], [ " + getX2()+ ", "+ getY2()+"], " +getColorToString()+", Preenchido: "+fill+ "\n";
     }
 }

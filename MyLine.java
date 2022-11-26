@@ -20,7 +20,7 @@ public class MyLine extends MyShape{
 
     @Override //toString
     public String toString() {
-        return "Linha: [ " +getX1() +", " +getY1() + " ], [ " + getX2()+ ", "+ getY2()+"], " +getMyColor() + "\n";
+        return "Linha: [ " +getX1() +", " +getY1() + " ], [ " + getX2()+ ", "+ getY2()+"], " +getColorToString() + "\n";
     }
 
 }
