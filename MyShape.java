@@ -48,5 +48,6 @@ public abstract class MyShape {
     public void setMyColor(Color myColor) {
         this.myColor = myColor;
     }
+    //abstract methods 
     abstract public void draw(Graphics g);
 }

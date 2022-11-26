@@ -17,8 +17,8 @@ public class DrawPanel extends JPanel {
             x=x+grid;
             shapeList.add(new MyLine(x, 0, x, App.getH(), Color.BLACK));
             shapeList.add(new MyLine(0, x, App.getH(), x, Color.BLACK));
-
         } */
+        
         for (int i = 0; i < (5+App.gRandom(5)); i++) {
             shapeList.add(MyLine.GRandom());
         } 
@@ -36,6 +36,10 @@ public class DrawPanel extends JPanel {
 
         for (int i = 0; i < (5+App.gRandom(5)); i++) {
             shapeList.add(MyTriangleIso.GRandom());
+        }
+
+        for (int i = 0; i < (5+App.gRandom(5)); i++) {
+            shapeList.add(MyHexagon.GRandom());
         }
     }
 
