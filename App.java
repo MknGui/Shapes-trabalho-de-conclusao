@@ -1,8 +1,11 @@
+
 import java.util.Random;
 import javax.swing.JFrame;
+import java.util.Scanner;
 
-public class App {
+public class App extends DrawPanel {
     static private int h=500, w=h;
+    static private int option=9000;
     
     static private Random genRandom = new Random();
     static int gRandom(int range){
@@ -14,9 +17,80 @@ public class App {
     static int getH(){
         return h;
     }
-
-    public static void main(String[] args) {
-        
+    
+    public static void main(String[] args) throws InterruptedException{
+        try (Scanner input = new Scanner(System.in)) {
+            while (option!=0){
+                System.out.println("Quais formas voce deseja: \n[1] Linha:\n[2] Oval:\n[3] Retangulo:\n[4] Triangulo:\n[5] Triangulo Isoceles:\n[6] Hexagono:\n[0] Pronto:");
+                option=input.nextInt();
+                switch(option){
+                    case 0:
+                        clear();
+                        System.out.println("Executando: ");;
+                        break;
+                    case 1: 
+                        clear();
+                        System.out.println("Qntd. de linhas: ");
+                        DrawPanel.setQntdL(input.nextInt());
+                        clear();
+                        break;
+            
+                    
+                    case 2:
+                        clear();
+                        System.out.println("Qntd. de Oval: ");
+                        DrawPanel.setQntdC(input.nextInt());
+                        clear();
+                        break;
+                    
+                    
+                    case 3:
+                        clear();
+                        System.out.println("Qntd. de retangulos: ");
+                        DrawPanel.setQntdR(input.nextInt());
+                        clear();
+                        break;
+                    
+                    
+                    case 4:
+                        clear();
+                        System.out.println("Qntd. de Triangulos: ");
+                        DrawPanel.setQntdT(input.nextInt());
+                        clear();
+                        break;
+                    
+                    
+                    case 5:
+                        clear();
+                        System.out.println("Qntd. de Triangulos Isosceles: ");
+                        DrawPanel.setQntdTiSo(input.nextInt());
+                        clear();
+                        break;
+                        
+                    
+                    case 6:
+                        clear();
+                        System.out.println("Qntd. de Hexagono: ");
+                        DrawPanel.setQntdH(input.nextInt());
+                        clear();
+                        break;
+                    
+                    default:
+                        clear();
+                        System.out.print("Invalido!!");
+                        Thread.sleep(600);
+                        System.out.print("!");
+                        Thread.sleep(600);
+                        System.out.print("!");
+                        Thread.sleep(600);
+                        clear();
+                        break;
+                        
+            }
+        }
+    }
+    
+    
         DrawPanel panel = new DrawPanel();
         JFrame application = new JFrame();
 
@@ -28,4 +102,8 @@ public class App {
         System.out.println(DrawPanel.getShapelist());
     }
     
+    public static void clear() {
+        System.out.print("\033[H\033[2J");
+        System.out.flush();
+}
 }

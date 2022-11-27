@@ -7,6 +7,10 @@ public class DrawPanel extends JPanel {
     private static ArrayList<MyShape>shapeList = new ArrayList<MyShape>(1);
     public static ArrayList<MyShape> getShapelist(){ return shapeList;};
 
+    
+    //varíaveis pro scanner
+    private static int qntdL,qntdC,qntdR,qntdT,qntdTiSo,qntdH;
+
     public DrawPanel() {
         setBackground(Color.WHITE);
 
@@ -19,28 +23,25 @@ public class DrawPanel extends JPanel {
             shapeList.add(new MyLine(0, x, App.getH(), x, Color.BLACK));
         } */
 
-        for (int i = 0; i < (5+App.gRandom(5)); i++) {
+        for (int i = 0; i < (qntdL); i++) {
             shapeList.add(MyLine.GRandom());
         } 
-
-        for (int i = 0; i < (5+App.gRandom(5)); i++) {
+        for (int i = 0; i < (qntdC); i++) {
             shapeList.add(MyOval.GRandom());
         } 
-
-        for (int i = 0; i < (5+App.gRandom(5)); i++) {
+        for (int i = 0; i < (qntdT); i++) {
             shapeList.add(MyRectangle.GRandom());
-        }
-        for (int i = 0; i < (5+App.gRandom(5)); i++) {
+        } 
+        for (int i = 0; i < (qntdT); i++) {
             shapeList.add(MyTriangle.GRandom());
-        }
-
-        for (int i = 0; i < (5+App.gRandom(5)); i++) {
+        } 
+        for (int i = 0; i < (qntdTiSo); i++) {
             shapeList.add(MyTriangleIso.GRandom());
-        }
-
-        for (int i = 0; i < (5+App.gRandom(5)); i++) {
+        } 
+        for (int i = 0; i < (qntdH); i++) {
             shapeList.add(MyHexagon.GRandom());
-        }
+        } 
+        
     }
 
     
@@ -52,4 +53,40 @@ public class DrawPanel extends JPanel {
         }
 
     }
+
+
+    public static void setShapeList(ArrayList<MyShape> shapeList) {
+        DrawPanel.shapeList = shapeList;
+    }
+
+
+    public static void setQntdL(int a) {
+        qntdL = qntdL+a;
+    }
+
+
+    public static void setQntdC(int a) {
+        DrawPanel.qntdC = qntdC+a;
+    }
+
+
+    public static void setQntdR(int a) {
+        DrawPanel.qntdR = qntdR+a;
+    }
+
+
+    public static void setQntdT(int a) {
+        DrawPanel.qntdT = qntdT+a;
+    }
+
+
+    public static void setQntdTiSo(int a) {
+        DrawPanel.qntdTiSo = qntdTiSo+a;
+    }
+
+
+    public static void setQntdH(int a) {
+        DrawPanel.qntdH = qntdH+a;
+    }
+
 }

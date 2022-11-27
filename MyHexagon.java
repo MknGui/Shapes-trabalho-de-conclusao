@@ -50,7 +50,7 @@ public class MyHexagon extends MyShape{
 
     @Override //toString
     public String toString() {
-        return "Triangulo Isoceles: [ " +getX1() +", " +getY1() + " ], [ " + getX2()+ ", "+ getY2()+"], " +getColorToString()+", Preenchido: "+fill + "\n";
+        return "Hexagono: [ " +getX1() +", " +getY1() + " ], [ " + getX2()+ ", "+ getY2()+"], " +getColorToString()+", Preenchido: "+fill + "\n";
     }
 
 }
