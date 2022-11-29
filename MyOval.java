@@ -42,14 +42,21 @@ public class MyOval extends MyShape {
     }
 
     public void draw(Graphics g){
-
         g.setColor(getMyColor());
-        g.drawOval(getX1(), getY1(), getX2(), getY2());
+        if (fill==false){
+            g.drawOval(getX1(), getY1(), getX2(), getY2());
+        } else { 
+            g.fillOval(getX1(), getY1(), getX2(), getX1());
+        }
     }
 
     public static MyOval GRandom (){
         Color color = new Color(App.gRandom(256), App.gRandom(256), App.gRandom(256));
         return new MyOval(App.gRandomMax(), App.gRandomMax(), App.gRandomMax(), App.gRandomMax(), color);
+    }
+    public static MyOval GRandomFill (){
+        Color color = new Color(App.gRandom(256), App.gRandom(256), App.gRandom(256));
+        return new MyOval(App.gRandomMax(), App.gRandomMax(), App.gRandomMax(), App.gRandomMax(), color, true);
     }
 
     @Override //toString

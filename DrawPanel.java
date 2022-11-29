@@ -9,7 +9,7 @@ public class DrawPanel extends JPanel {
 
     
     //varíaveis pro scanner
-    private static int qntdL,qntdC,qntdR,qntdT,qntdTiSo,qntdH;
+    private static int qntdL,qntdC,qntdCF,qntdR,qntdRF,qntdT,qntdTiSo,qntdH;
 
     public DrawPanel() {
         setBackground(Color.WHITE);
@@ -29,8 +29,14 @@ public class DrawPanel extends JPanel {
         for (int i = 0; i < (qntdC); i++) {
             shapeList.add(MyOval.GRandom());
         } 
-        for (int i = 0; i < (qntdT); i++) {
+        for (int i = 0; i < (qntdCF); i++) {
+            shapeList.add(MyOval.GRandomFill());
+        } 
+        for (int i = 0; i < (qntdR); i++) {
             shapeList.add(MyRectangle.GRandom());
+        } 
+        for (int i = 0; i < (qntdRF); i++) {
+            shapeList.add(MyRectangle.GRandomFill());
         } 
         for (int i = 0; i < (qntdT); i++) {
             shapeList.add(MyTriangle.GRandom());
@@ -87,6 +93,16 @@ public class DrawPanel extends JPanel {
 
     public static void setQntdH(int a) {
         DrawPanel.qntdH = qntdH+a;
+    }
+
+
+    public static void setQntdCF(int qntdCF) {
+        DrawPanel.qntdCF = qntdCF;
+    }
+
+
+    public static void setQntdRF(int qntdRF) {
+        DrawPanel.qntdRF = qntdRF;
     }
 
 }

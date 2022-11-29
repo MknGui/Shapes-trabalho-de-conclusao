@@ -5,7 +5,7 @@ import java.util.Scanner;
 
 public class App extends DrawPanel {
     static private int h=500, w=h;
-    static private int option=9000;
+    static private int option=-1;
     
     static private Random genRandom = new Random();
     static int gRandom(int range){
@@ -37,17 +37,35 @@ public class App extends DrawPanel {
             
                     
                     case 2:
+                        int i=3;
+                        while (i!=1 && i!=0){
+                            clear();
+                            System.out.println("Preenchido: [0] Não [1] Sim ");
+                            i=input.nextInt();
+                        }
                         clear();
                         System.out.println("Qntd. de Oval: ");
-                        DrawPanel.setQntdC(input.nextInt());
+                        if (i==0)
+                            DrawPanel.setQntdC(input.nextInt());
+                        else
+                            DrawPanel.setQntdCF(input.nextInt());
                         clear();
                         break;
                     
                     
                     case 3:
+                            i=3;
+                            while (i!=1 && i!=0){
+                                clear();
+                                System.out.println("Preenchido: [0] Não [1] Sim ");
+                                i=input.nextInt();
+                            }
                         clear();
                         System.out.println("Qntd. de retangulos: ");
-                        DrawPanel.setQntdR(input.nextInt());
+                        if (i==0)
+                            DrawPanel.setQntdR(input.nextInt());
+                        else
+                            DrawPanel.setQntdRF(input.nextInt());
                         clear();
                         break;
                     
@@ -74,6 +92,8 @@ public class App extends DrawPanel {
                         DrawPanel.setQntdH(input.nextInt());
                         clear();
                         break;
+
+                    
                     
                     default:
                         clear();
